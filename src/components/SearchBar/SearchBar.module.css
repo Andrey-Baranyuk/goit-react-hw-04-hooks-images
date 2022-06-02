@@ -1,0 +1,79 @@
+.SearchBar {
+  top: 0;
+  left: 0;
+  position: sticky;
+  z-index: 1100;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 64px;
+  margin-bottom: 24px;
+  padding-right: 24px;
+  padding-left: 24px;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  color: #fff;
+  background-color: #ea2020;
+  box-shadow: 0px 2px 5px rgb(0 0 0 / 12%);
+}
+
+.SearchForm {
+  position: relative;
+}
+
+.SearchForm-button {
+  position: absolute;
+  top: 50%;
+  right: 3px;
+  transform: translateY(-50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border: 0;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.357);
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
+}
+
+.SearchForm-button:hover,
+.SearchForm-button:focus {
+  background-color: #d6ff43;
+}
+
+.SearchForm-button-label {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  clip-path: inset(50%);
+  border: 0;
+}
+
+.SearchForm-input {
+  display: inline-block;
+  padding: 10px 50px 10px 20px;
+  width: 300px;
+  border: 0;
+  border-radius: 25px;
+  outline: none;
+}
+
+.SearchForm-input,
+.SearchForm-input::placeholder {
+  color: #000;
+  background-color: #fff;
+  font: 16px/3 sans-serif;
+  line-height: 1.5;
+}
+
+@media screen and (min-width: 768px) {
+  .SearchForm-input {
+    width: 400px;
+  }
+}
